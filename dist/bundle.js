@@ -1,9 +1,30 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
 },{}],2:[function(require,module,exports){
+"use strict";
+
+let printUserText = (message) => {
+    let userText = document.getElementById("userMessage").value;
+    document.getElementById("outputBox").innerHTML += userText;
+};
+
+module.exports.pressingEnter = () => {
+    let userText = document.getElementById("userMessage");
+    userText.addEventListener('keypress', function (e) {
+    var key = e.keyCode;
+    if (key === 13) {
+        // console.log("enter key working");
+        printUserText();
+    }
+    });
+};
+
+
+},{}],3:[function(require,module,exports){
 'use strict';
 let formatter = require("./formatter");
 let dom = require("./outputDOM");
+let interact = require("./interactDOM");
 
 let myRequest = new XMLHttpRequest();
 
@@ -23,7 +44,9 @@ myRequest.send();
 
 // dom.outputMessages(getMessages());
 
-},{"./formatter":1,"./outputDOM":3}],3:[function(require,module,exports){
+
+interact.pressingEnter();
+},{"./formatter":1,"./interactDOM":2,"./outputDOM":4}],4:[function(require,module,exports){
 'use strict';
 
 module.exports.outputMessages = (messageArr) => {
@@ -34,4 +57,4 @@ module.exports.outputMessages = (messageArr) => {
         console.log("message", message.user1);
     });
 };
-},{}]},{},[2]);
+},{}]},{},[3]);

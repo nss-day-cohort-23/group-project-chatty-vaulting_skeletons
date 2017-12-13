@@ -1,6 +1,7 @@
 'use strict';
 let formatter = require("./formatter");
 let dom = require("./outputDOM");
+let interact = require("./interactDOM");
 
 let myRequest = new XMLHttpRequest();
 
@@ -19,3 +20,6 @@ myRequest.open("GET", "data/messages.json");
 myRequest.send();
 
 // dom.outputMessages(getMessages());
+
+
+interact.pressingEnter();
