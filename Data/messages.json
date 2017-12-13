@@ -1,0 +1,12 @@
+{
+    "messages": [
+        {
+        "user1": "Welcome to our messaging site.",
+        "user2": "Thanks!"
+        },
+        {
+        "user1": "How are you?",
+        "user2": "I'm good."    
+        }
+    ]
+}
