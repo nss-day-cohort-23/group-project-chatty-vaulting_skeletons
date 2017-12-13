@@ -1,7 +1,42 @@
-#outputBox {
-    width: 500px;
-    height: 200px;
-    border: 1px solid black;
-    box-shadow: 3px 0px 8px;
-    margin: 15px;
+
+
+.dark{
+    background: rgb(58, 52, 52);
+    color: rgb(221, 204, 171);
+
+    #outputBox {
+        background: rgba(46, 37, 37, 0.603);
+        overflow: scroll;
+        color: rgb(221, 204, 171);
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        box-shadow: 3px 0px 8px;
+        margin: 15px;
+    }
+}
+
+.light{
+    background: rgb(255, 255, 255);
+
+    #outputBox {
+        background: rgba(96, 202, 252, 0.747);
+        overflow: scroll;
+        color: rgb(34, 31, 33);
+        width: 500px;
+        height: 500px;
+        border: 1px solid rgb(58, 60, 71);
+        box-shadow: 3px 0px 8px;
+        margin: 15px;
+    }
+}
+
+
+.largeText{
+    font-size: 100px;
+}
+
+
+.smallText{
+    font-size: 15px;
 }
