@@ -1,8 +1,32 @@
-#outputBox {
-  width: 500px;
-  height: 200px;
-  border: 1px solid black;
-  box-shadow: 3px 0px 8px;
-  margin: 15px; }
+.dark {
+  background: #3a3434;
+  color: #ddccab; }
+  .dark #outputBox {
+    background: rgba(46, 37, 37, 0.603);
+    overflow: scroll;
+    color: #ddccab;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    box-shadow: 3px 0px 8px;
+    margin: 15px; }
+
+.light {
+  background: white; }
+  .light #outputBox {
+    background: rgba(96, 202, 252, 0.747);
+    overflow: scroll;
+    color: #221f21;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #3a3c47;
+    box-shadow: 3px 0px 8px;
+    margin: 15px; }
+
+.largeText {
+  font-size: 100px; }
+
+.smallText {
+  font-size: 15px; }
 
 /*# sourceMappingURL=main.css.map */
