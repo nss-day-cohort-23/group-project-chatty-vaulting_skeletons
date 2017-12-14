@@ -24,8 +24,10 @@
         border-radius: 3px;
         padding: 25px 15px;
         margin: 20px;
+        margin-top: 350px;
         width: 800px;
         height: 600px;
+        z-index: 500;
         box-shadow: 
         0 0 0 10px hsl(54, 20%, 21%),
         0 0 0 15px hsl(54, 20%, 31%),
@@ -72,10 +74,12 @@
         color: rgb(138, 127, 13);
         padding: 25px 15px;
         margin: 20px;
+        margin-top: 350px;
         width: 800px;
         height: 600px;
         border: 1px solid rgb(58, 60, 71);
         border-radius: 3px;
+        z-index: 500;
         box-shadow: 
         0 0 0 10px hsl(180, 4%, 52%),
         0 0 0 15px hsl(180, 4%, 62%),
@@ -163,6 +167,7 @@
     grid-template-rows: repeat(3 1fr);
     justify-items: left;
     margin: 10px;
+    position: fixed;
 }
 
 .checkboxSelect {
