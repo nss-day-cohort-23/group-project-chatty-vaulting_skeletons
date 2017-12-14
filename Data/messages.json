@@ -1,12 +1,25 @@
 {
     "messages": [
         {
-        "user1": "Welcome to our messaging site.",
-        "user2": "Thanks!"
+            "user": "Kelly Anne" ,
+            "message": "Welcome to our messaging site."
         },
         {
-        "user1": "How are you?",
-        "user2": "I'm good."    
+            "user": "Mike P",
+            "message": "Welcome to our messaging site."
+        },
+        {
+            "user": "Kelly Anne",
+            "message": "Welcome to our messaging site."
+        },
+        {
+            "user": "Mike P",
+            "message": "Welcome to our messaging site."
+        },
+        {
+            "user": "Kelly Anne",
+            "message": "Welcome to our messaging site."
         }
+       
     ]
 }
