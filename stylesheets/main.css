@@ -1,60 +1,75 @@
 .dark {
-  background: #3a3434;
-  color: #ddccab; }
+  background: linear-gradient(-65deg, #3a3434, #afab88);
+  color: #d3cfc6; }
+  .dark #userMessage {
+    background-color: rgba(255, 255, 255, 0.479); }
+  .dark .buttColor {
+    color: #dbe921; }
   .dark #outputBox {
-    background: rgba(46, 37, 37, 0.603);
+    background: #535242;
+    background-image: url(/images/chattybonez2.png);
+    opacity: 3;
     overflow: scroll;
     color: #ddccab;
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
-    box-shadow: 3px 0px 8px;
-    margin: 15px; }
+    width: 700px;
+    height: 600px;
+    border-radius: 3px;
+    padding: 25px 15px;
+    margin: 20px;
+    width: 800px;
+    height: 600px;
+    box-shadow: 0 0 0 10px #403e2b, 0 0 0 15px #5f5c3f, 0 0 0 20px #7d7954, 0 0 0 25px #9b9669, 0 0 0 30px #afab88; }
+  .dark #clearButt {
+    margin: 20px;
+    border-radius: 10px;
+    background-color: rgba(31, 31, 36, 0.267);
+    color: #ddccab; }
+  .dark #clearButt:hover {
+    background-color: #9b9669;
+    color: #474540;
+    border-color: #ddccab; }
 
 .light {
-  background: white; }
+  background: linear-gradient(-45deg, #bcf5ff, #fdf7c4); }
+  .light .buttColor {
+    color: #04a19a; }
+  .light #userMessage {
+    background-color: rgba(255, 255, 255, 0.479); }
   .light #outputBox {
-    background: rgba(96, 202, 252, 0.747);
+    background: linear-gradient(-45deg, #bcf5ff, #fdf7c4);
+    background-image: url(/images/chatty2.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
     overflow: scroll;
-    color: #221f21;
-    width: 500px;
-    height: 500px;
+    color: #8a7f0d;
+    padding: 25px 15px;
+    margin: 20px;
+    width: 800px;
+    height: 600px;
     border: 1px solid #3a3c47;
-    box-shadow: 3px 0px 8px;
-    margin: 15px; }
-
-.largeText {
-  font-size: 30px; }
-
-.smallText {
-  font-size: 15px; }
-
-.navArea {
-  display: grid;
-  grid-template-rows: repeat(3 1fr);
-  justify-items: center; }
-
-.main {
-  padding-top: 200px; }
-
-.checkboxSelect {
-  grid-row-start: 3;
-  grid-column-start: 1; }
+    border-radius: 3px;
+    box-shadow: 0 0 0 10px #808989, 0 0 0 15px #9aa2a2, 0 0 0 20px #b5baba, 0 0 0 25px #cfd3d3, 0 0 0 30px #eaebeb; }
+  .light #clearButt {
+    margin: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 250, 0);
+    color: #8a7f0d; }
+  .light #clearButt:hover {
+    background: linear-gradient(-45deg, #bcf5ff, #fdf7c4);
+    color: #868257;
+    border-color: 0.1px solid #ffef14;
+    box-shadow: 10 10 10 10px #e0e6e6; }
 
 #inputBox {
   grid-row-start: 2;
-  grid-column-start: 1; }
-
-#outputBox {
-  width: 500px;
-  height: 200px;
-  border: 1px solid black;
-  box-shadow: 3px 0px 8px;
-  margin: 15px; }
+  grid-column-start: 1;
+  align-content: flex-start;
+  margin: 20px 0 10px 0; }
 
 #imageSkull {
-  width: 6em;
-  height: 6em;
+  width: 8em;
+  height: 8em;
   z-index: 100;
   grid-column-start: 1;
   grid-row-start: 1;
@@ -79,5 +94,41 @@
   grid-column-start: 1;
   grid-row-start: 1;
   padding-top: 10%; }
+
+.boxContainer {
+  display: grid;
+  justify-content: right;
+  margin-right: 101px;
+  margin-bottom: 25px; }
+
+.largeText {
+  font-size: 35px; }
+
+.smallText {
+  font-size: 20px; }
+
+.navArea {
+  display: grid;
+  grid-template-rows: repeat(3 1fr);
+  justify-items: left;
+  margin: 50px; }
+
+.checkboxSelect {
+  grid-row-start: 3;
+  grid-column-start: 1; }
+
+.delete {
+  border: .1px solid black;
+  background: rgba(255, 255, 255, 0.384);
+  border-radius: 10px;
+  font-size: 10px; }
+
+.checkboxSelect {
+  align-content: flex-end; }
+
+p {
+  margin-left: 15px;
+  margin-top: 0px;
+  padding-top: 0px; }
 
 /*# sourceMappingURL=main.css.map */

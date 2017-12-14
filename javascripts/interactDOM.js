@@ -1,8 +1,9 @@
 "use strict";
 
+
 let printUserText = (message) => {
     let userText = document.getElementById("userMessage").value;
-    document.getElementById("outputBox").innerHTML += `${userText}<br><br>`;
+    document.getElementById("outputBox").innerHTML += `<p>${userText}<button class="delete">Delete</button></p>`;
 };
 
 function clearUserText () {
@@ -49,3 +50,12 @@ function largeText() {
 
 document.getElementById("large").addEventListener("click", largeText);
 
+
+
+// ------------------------------------------DELETE-MESSAGE-FUNCTION-------------------------------------------------
+
+var deleteMessage = document.getElementsByClassName("remove");
+
+function deleteMessage() {
+    
+}
