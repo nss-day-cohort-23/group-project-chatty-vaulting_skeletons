@@ -1,4 +1,5 @@
 "use strict";
+
 let hub = require("./hub");
 let dom = require("./outputDOM");
 let moment = require("moment");
@@ -14,6 +15,7 @@ let printUserText = (message) => {
     console.log('newArr',messageObject);
     dom.outputMessages(messageArray);
     console.log('moment',moment().format("LTS"));
+
 };
 
 function clearUserText () {
@@ -60,6 +62,8 @@ function largeText() {
 
 document.getElementById("large").addEventListener("click", largeText);
 
+
+
 //-------------------Delete Button-------------------------------
 
 let outputBox = document.getElementById("outputBox");
@@ -86,3 +90,4 @@ function clearMessages() {
 }
 let clearButton = document.getElementById("clearButt");
 clearButton.addEventListener("click", clearMessages);
+

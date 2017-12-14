@@ -1,75 +1,117 @@
 
 
-
+// -------------------------------------------DARK THEME----------------------------------------------
 .dark{
-    background: rgb(58, 52, 52);
-    color: rgb(221, 204, 171);
+    background: linear-gradient(-65deg, rgb(58, 52, 52), hsl(54, 20%, 61%));
+    color: rgb(211, 207, 198);
+
+    #userMessage {
+        background-color: rgba(255, 255, 255, 0.479);
+    }
+
+    .buttColor{
+        color: rgb(219, 233, 33);
+    }
 
     #outputBox {
-        background: rgba(46, 37, 37, 0.603);
+        background: rgb(83, 82, 66);
+        background-image: url(/images/chattybonez2.png);
+        opacity: 3;
         overflow: scroll;
         color: rgb(221, 204, 171);
-        width: 500px;
-        height: 500px;
-        border: 1px solid black;
-        box-shadow: 3px 0px 8px;
-        margin: 15px;
+        width: 700px;
+        height: 600px;
+        border-radius: 3px;
+        padding: 25px 15px;
+        margin: 20px;
+        width: 800px;
+        height: 600px;
+        box-shadow: 
+        0 0 0 10px hsl(54, 20%, 21%),
+        0 0 0 15px hsl(54, 20%, 31%),
+        0 0 0 20px hsl(54, 20%, 41%),
+        0 0 0 25px hsl(54, 20%, 51%),
+        0 0 0 30px hsl(54, 20%, 61%),
+    }
+
+    #clearButt{
+        margin: 20px;
+        border-radius: 10px;
+        background-color: rgba(31, 31, 36, 0.267);
+        color: rgb(221, 204, 171);
+    }
+
+    #clearButt:hover{
+        background-color: hsl(54, 20%, 51%);
+        color: rgb(71, 69, 64);
+        border-color:  rgb(221, 204, 171);
     }
 }
+
+// -------------------------------------------LIGHT THEME----------------------------------------------
+
 
 .light{
-    background: rgb(255, 255, 255);
+    background: linear-gradient(-45deg, rgb(188, 245, 255), hsl(54, 93%, 88%));
+
+    .buttColor{
+        color: rgb(4, 161, 154);
+    }
+
+    #userMessage {
+        background-color: rgba(255, 255, 255, 0.479);
+    }
 
     #outputBox {
-        background: rgba(96, 202, 252, 0.747);
+        background: linear-gradient(-45deg, rgb(188, 245, 255), hsl(54, 93%, 88%));     
+        background-image: url(/images/chatty2.png);
+        background-repeat: no-repeat;
+        background-position: right; 
+        background-attachment: fixed;
         overflow: scroll;
-        color: rgb(34, 31, 33);
-        width: 500px;
-        height: 500px;
+        color: rgb(138, 127, 13);
+        padding: 25px 15px;
+        margin: 20px;
+        width: 800px;
+        height: 600px;
         border: 1px solid rgb(58, 60, 71);
-        box-shadow: 3px 0px 8px;
-        margin: 15px;
+        border-radius: 3px;
+        box-shadow: 
+        0 0 0 10px hsl(180, 4%, 52%),
+        0 0 0 15px hsl(180, 4%, 62%),
+        0 0 0 20px hsl(180, 4%, 72%),
+        0 0 0 25px hsl(180, 4%, 82%),
+        0 0 0 30px hsl(180, 4%, 92%),
+    }
+
+    #clearButt{
+        margin: 20px;
+        border-radius: 10px;
+        background-color: hsla(60, 100%, 99%, 0);
+        color: rgb(138, 127, 13);
+    }
+
+    #clearButt:hover{
+        background: linear-gradient(-45deg, rgb(188, 245, 255), hsl(54, 93%, 88%));        
+        color: rgb(134, 130, 87);
+        border-color: .1px solid rgb(255, 239, 20);
+        box-shadow: 10 10 10 10px hsl(180, 11%, 89%);
     }
 }
+// -------------------------------------------IDs----------------------------------------------
 
 
-.largeText{
-    font-size: 30px;
-}
 
-
-.smallText{
-    font-size: 15px;
-}
-
-.navArea {
-    // position: fixed;
-    display: grid;
-    // grid-template-columns: repeat(3 1fr);
-    grid-template-rows: repeat(3 1fr);
-    justify-items: center;
-}
-.main {
-    padding-top: 200px;
-}
-.checkboxSelect {
-    grid-row-start: 3;
-    grid-column-start: 1;
-}
 #inputBox{
     grid-row-start: 2;
     grid-column-start: 1;
+    align-content: flex-start;
+    margin: 20px 0 10px 0;
 }
-#outputBox {
-    width: 500px;
-    height: 200px;
-    border: 1px solid black; 
-    box-shadow: 3px 0px 8px;
-    margin: 15px;
-}
+
 #imageSkull{
-    width: 6em;
-    height: 6em;
+    width: 8em;
+    height: 8em;
     z-index: 100;
     grid-column-start: 1;
     grid-row-start: 1;
@@ -96,4 +138,58 @@
     grid-row-start: 1;
     padding-top: 10%;
 }
+
+// -------------------------------------------CLASSES----------------------------------------------
+
+
+.boxContainer {
+    display: grid;
+    justify-content: right;
+    margin-right: 101px;
+    margin-bottom: 25px;
+}
+
+.largeText{
+    font-size: 35px;
+}
+
+
+.smallText{
+    font-size: 20px;
+}
+
+.navArea {
+    display: grid;
+    grid-template-rows: repeat(3 1fr);
+    justify-items: left;
+    margin: 50px;
+}
+
+.checkboxSelect {
+    grid-row-start: 3;
+    grid-column-start: 1;
+}
+
+.delete{
+    border: .1px solid black;
+    background: rgba(255, 255, 255, 0.384);
+    border-radius: 10px;
+    font-size: 10px;
+}
+
+
+.checkboxSelect{
+    align-content: flex-end;
+}
+
+
+// -------------------------------------------ELEMENTS----------------------------------------------
+
+
+p {
+    margin-left: 15px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
 

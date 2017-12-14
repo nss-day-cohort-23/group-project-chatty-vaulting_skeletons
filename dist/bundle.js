@@ -3,6 +3,7 @@
 },{}],2:[function(require,module,exports){
 "use strict";
 
+
 let messageArr = [];
 
 module.exports.getMessages = () =>{
@@ -45,6 +46,7 @@ let printUserText = (message) => {
     console.log('newArr',messageObject);
     dom.outputMessages(messageArray);
     console.log('moment',moment().format("LTS"));
+
 };
 
 function clearUserText () {
@@ -118,7 +120,9 @@ function clearMessages() {
 let clearButton = document.getElementById("clearButt");
 clearButton.addEventListener("click", clearMessages);
 
+
 },{"./hub":2,"./outputDOM":5,"moment":6}],4:[function(require,module,exports){
+
 'use strict';
 let hub = require("./hub");
 let formatter = require("./formatter");
