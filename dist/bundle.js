@@ -3,7 +3,6 @@
 },{}],2:[function(require,module,exports){
 "use strict";
 
-
 let messageArr = [];
 
 module.exports.getMessages = () =>{
@@ -31,6 +30,7 @@ module.exports.deleteAllText = ()=>{
 
 },{}],3:[function(require,module,exports){
 "use strict";
+
 let hub = require("./hub");
 let dom = require("./outputDOM");
 let moment = require("moment");
@@ -93,6 +93,8 @@ function largeText() {
 
 document.getElementById("large").addEventListener("click", largeText);
 
+
+
 //-------------------Delete Button-------------------------------
 
 let outputBox = document.getElementById("outputBox");
@@ -122,7 +124,6 @@ clearButton.addEventListener("click", clearMessages);
 
 
 },{"./hub":2,"./outputDOM":5,"moment":6}],4:[function(require,module,exports){
-
 'use strict';
 let hub = require("./hub");
 let formatter = require("./formatter");
