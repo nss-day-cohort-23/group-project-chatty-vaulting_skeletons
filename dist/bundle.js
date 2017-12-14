@@ -37,7 +37,7 @@ let moment = require("moment");
 
 let printUserText = (message) => {
     let messageObject = {};
-    messageObject.user = 'TheDonald'; 
+    messageObject.user = 'TheDonald '; 
     messageObject.date = moment().format("LTS"); 
     messageObject.message = document.getElementById("userMessage").value;
     // document.getElementById("outputBox").innerHTML += userName +=`${userText}<br><br>`;
@@ -118,6 +118,11 @@ function clearMessages() {
     let messagesOnDom = document.getElementById("outputBox");
     messagesOnDom.innerHTML = "";
     hub.deleteAllText();
+    // if (messagesOnDom.value.length === 0 ) {
+
+    //     clearButton.style.display = "none";
+
+    // }
 }
 let clearButton = document.getElementById("clearButt");
 clearButton.addEventListener("click", clearMessages);
