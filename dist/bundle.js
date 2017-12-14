@@ -2,10 +2,15 @@
 
 },{}],2:[function(require,module,exports){
 "use strict";
-
-let printUserText = (message) => {
-    let userText = document.getElementById("userMessage").value;
-    document.getElementById("outputBox").innerHTML += `${userText}<br><br>`;
+let dom = require("./outputDOM");
+let printUserText = (messageArr) => {
+    let messageObject = {};
+    messageObject.user = 'TheDonald';  
+    messageObject.message = document.getElementById("userMessage").value;
+    // document.getElementById("outputBox").innerHTML += userName +=`${userText}<br><br>`;
+    messageArr.push(messageObject);
+    console.log('newArr',messageArr);
+    dom.outputMessages(messageArr);
 };
 
 function clearUserText () {
@@ -13,15 +18,15 @@ function clearUserText () {
     userText.value = "";
 }
 
-let userArr = [];
 
-module.exports.pressingEnter = () => {
+
+module.exports.pressingEnter = (messageArr) => {
     let userText = document.getElementById("userMessage");
     userText.addEventListener('keypress', function (e) {
     var key = e.keyCode;
     if (key === 13) {
         // console.log("enter key working");
-        printUserText();
+        printUserText(messageArr);
         clearUserText();
     }
     });
@@ -53,7 +58,7 @@ function largeText() {
 document.getElementById("large").addEventListener("click", largeText);
 
 
-},{}],3:[function(require,module,exports){
+},{"./outputDOM":4}],3:[function(require,module,exports){
 'use strict';
 let formatter = require("./formatter");
 let dom = require("./outputDOM");
@@ -62,13 +67,15 @@ let interact = require("./interactDOM");
 let myRequest = new XMLHttpRequest();
 
 console.log("myRequest", myRequest);
-
+let messageArr = [];
 const getMessages = () => {
     console.log("event.target", event.target);
     const textData = JSON.parse(event.target.responseText);
     let {messages} = textData; //{} deconstructs object into an array
     console.log("data", textData);
+    messageArr = messages;
     dom.outputMessages(messages);
+    interact.pressingEnter(messageArr);
 };
 
 myRequest.addEventListener("load", getMessages);
@@ -78,15 +85,15 @@ myRequest.send();
 // dom.outputMessages(getMessages());
 
 
-interact.pressingEnter();
 },{"./formatter":1,"./interactDOM":2,"./outputDOM":4}],4:[function(require,module,exports){
 'use strict';
 
 module.exports.outputMessages = (messageArr) => {
     let messageList = document.getElementById("outputBox");
     console.log("hi");
+    messageList.innerHTML = '';
     messageArr.forEach(function(message) {
-        messageList.innerHTML += `<p>User 1: ${message.user1} <br> User 2: ${message.user2}<p/>`;
+        messageList.innerHTML += `<p> ${message.user}: ${message.message}</p>`;
         console.log("message", message.user1);
     });
 };

@@ -1,8 +1,13 @@
 "use strict";
-
-let printUserText = (message) => {
-    let userText = document.getElementById("userMessage").value;
-    document.getElementById("outputBox").innerHTML += `${userText}<br><br>`;
+let dom = require("./outputDOM");
+let printUserText = (messageArr) => {
+    let messageObject = {};
+    messageObject.user = 'TheDonald';  
+    messageObject.message = document.getElementById("userMessage").value;
+    // document.getElementById("outputBox").innerHTML += userName +=`${userText}<br><br>`;
+    messageArr.push(messageObject);
+    console.log('newArr',messageArr);
+    dom.outputMessages(messageArr);
 };
 
 function clearUserText () {
@@ -10,15 +15,15 @@ function clearUserText () {
     userText.value = "";
 }
 
-let userArr = [];
 
-module.exports.pressingEnter = () => {
+
+module.exports.pressingEnter = (messageArr) => {
     let userText = document.getElementById("userMessage");
     userText.addEventListener('keypress', function (e) {
     var key = e.keyCode;
     if (key === 13) {
         // console.log("enter key working");
-        printUserText();
+        printUserText(messageArr);
         clearUserText();
     }
     });
