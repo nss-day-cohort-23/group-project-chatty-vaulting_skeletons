@@ -46,6 +46,7 @@ let printUserText = (message) => {
     console.log('newArr',messageObject);
     dom.outputMessages(messageArray);
     console.log('moment',moment().format("LTS"));
+    ifButtPress();
 
 };
 
@@ -108,23 +109,30 @@ function deleteUserMessage(){
         hub.deleteMessage(userTextObjectInputToDelete);
         let messageArray = hub.getMessages();
         dom.outputMessages(messageArray);
+        ifButtPress();
     }
 }
 
 //-----------------Clear All Text--------------------------
 
 
-function clearMessages() {
-    let messagesOnDom = document.getElementById("outputBox");
-    messagesOnDom.innerHTML = "";
-    hub.deleteAllText();
-    // if (messagesOnDom.value.length === 0 ) {
-
-    //     clearButton.style.display = "none";
-
-    // }
-}
+let messagesOnDom = document.getElementById("outputBox");
 let clearButton = document.getElementById("clearButt");
+function clearMessages() {
+    messagesOnDom.innerHTML = "";
+    hub.deleteAllText(); 
+    ifButtPress();
+}
+// if (messagesOnDom.value === '') {
+//     clearButton.disabled = true;
+// }
+function ifButtPress(){
+    if (messagesOnDom.innerText === '') {
+        clearButton.disabled = true;
+    } else
+        clearButton.disabled = false;
+}        
+            
 clearButton.addEventListener("click", clearMessages);
 
 
